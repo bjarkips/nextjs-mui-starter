@@ -1,6 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/require-default-props */
-/* eslint-disable jsx-a11y/anchor-has-content */
+/*
+  eslint-disable
+    jsx-a11y/anchor-has-content,
+    react/require-default-props,
+    react/jsx-props-no-spreading,
+    prefer-arrow-callback
+*/
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,7 +13,7 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
-const NextComposed = React.forwardRef((props, ref) => {
+const NextComposed = React.forwardRef(function NextComposed(props, ref) {
   const {
     as,
     href,

@@ -1,5 +1,5 @@
-/* eslint-disable react/jsx-props-no-spreading */
 /* global document */
+/* eslint-disable react/jsx-props-no-spreading */
 
 import React from 'react';
 import App from 'next/app';

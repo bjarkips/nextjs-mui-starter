@@ -1,4 +1,11 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+/*
+  eslint-disable
+    jsx-a11y/anchor-has-content,
+    react/require-default-props,
+    react/jsx-props-no-spreading,
+    prefer-arrow-callback
+*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -7,7 +14,12 @@ import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
 const NextComposed = React.forwardRef(function NextComposed(props, ref) {
-  const { as, href, prefetch, ...other } = props;
+  const {
+    as,
+    href,
+    prefetch,
+    ...other
+  } = props;
 
   return (
     <NextLink href={href} prefetch={prefetch} as={as}>

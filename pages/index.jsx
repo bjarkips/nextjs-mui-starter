@@ -10,7 +10,8 @@ function Copyright() {
       {'Copyright © '}
       <MuiLink color="inherit" href="https://material-ui.com/">
         Your Website
-      </MuiLink>{' '}
+      </MuiLink>
+      {' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>

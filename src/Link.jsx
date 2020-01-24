@@ -1,4 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/require-default-props */
 /* eslint-disable jsx-a11y/anchor-has-content */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -6,8 +9,13 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
-const NextComposed = React.forwardRef(function NextComposed(props, ref) {
-  const { as, href, prefetch, ...other } = props;
+const NextComposed = React.forwardRef((props, ref) => {
+  const {
+    as,
+    href,
+    prefetch,
+    ...other
+  } = props;
 
   return (
     <NextLink href={href} prefetch={prefetch} as={as}>
@@ -18,7 +26,7 @@ const NextComposed = React.forwardRef(function NextComposed(props, ref) {
 
 NextComposed.propTypes = {
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   prefetch: PropTypes.bool,
 };
 
@@ -53,7 +61,7 @@ Link.propTypes = {
   activeClassName: PropTypes.string,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
-  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   naked: PropTypes.bool,
   onClick: PropTypes.func,

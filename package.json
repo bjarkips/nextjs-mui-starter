@@ -21,11 +21,13 @@
     "parser": "@babel/eslint-parser"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
+    "@babel/core": "^7.13.10",
+    "@babel/eslint-parser": "^7.13.10",
+    "eslint": "^7.22.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
